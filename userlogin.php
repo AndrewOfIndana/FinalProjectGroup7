@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <!-- 
-            Authors: Andrew Choi, Abraham Johnson
-            Date: INSERT NEW DATE
-        -->
-        <meta charset="utf-8">
-        <title>Electronic's Store</title>
-        <link type="text/css" rel="stylesheet" href="www/css/styles.css" />
-    </head>
+<?php
+/**
+ * Author: Andrew Choi
+ * Description: This is the home page of Steros Electronics
+ */
+$pageTitle = "Steros Electronics";
+include ('includes/header.php');
+?>
 
-    <body>
-        <div id="navbar">
-            <a href="index.html">Home</a>  || <a href="books.html">List Books</a> ||
-        </div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis tenetur cum reiciendis iste, incidunt nihil optio sapiente fuga? Dolores, enim voluptatum quia nesciunt odio qui fuga porro quaerat laborum quos!</p>
 
-         <!-- Insert body !-->
-
-        <div id="footer"></div>
-    </body>
-</html>
+<?php
+include ('includes/footer.php');

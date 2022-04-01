@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  background-color: #bec8cd;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 16px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+p {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 16px;
+}
+.stress {
+  font-weight: bold;
+}
+
+/*Header*/
+.header {
+  width: 100%;
+  color: #bec8cd;
+}
+.header a {
+  color: #bec8cd;
+  font-size: 20px;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.header a:hover,
+.header a:active,
+.header a:focus
+{
+  color: white;
+}
+  .navbarTop {
+    height: 75px;
+    background-color: #051b24;
+    display: flex;
+    justify-content: space-between;
+  }
+    .userLinks {
+      margin-top: 25px;
+      margin-right: 25px;
+      display: flex;
+    }
+
+  .navbarBottom {
+    height: 75px;
+    background-color: #36525d;
+  }
+    .links {
+      width: 80%;
+      margin: 0 auto;
+      padding-top: 25px;
+      display: flex;
+      justify-content: space-between;
+    }
+.contentBody {
+  height: auto;
+  margin: 0 auto;
+}
+/*Home*/
+#home {
+  height: 500px;
+  width: 100%;
+  text-align: center;
+  padding-top: 100px;
+  color: #051b24;
+  background-image: linear-gradient(to bottom, RGB(190, 200, 205, .7), RGB(190, 200, 205, .7)), url(../assests/hero.png);
+   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#home h1 {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+#home h2 {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  font-size: 30px;
+}
+#home a {
+  color: #286716;
+  font-size: 30px;
+  text-decoration: none;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+#home a:hover,
+#home a:active,
+#home a:focus
+{
+  color: #4c944c;
+}
+/*Footer*/
+.footer {
+  height: 200px;
+  width: 100%;
+  background-color: #36525d;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+.footer p {
+  color: #bec8cd;
+  font-size: 20px;
+}
