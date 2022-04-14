@@ -11,7 +11,7 @@ require_once('includes/database.php');
 if (!filter_has_var(INPUT_GET, "id")) {
     $conn->close();
     require_once ('includes/footer.php');
-    die("Your request cannot be processed since there was a problem retrieving book id.");
+    die("Your request cannot be processed since there was a problem retrieving product id.");
 }
 
 //retrieve product id from a query string variable.

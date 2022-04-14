@@ -25,7 +25,7 @@ include ('includes/header.php');
         </div>
 	</form>
     <?php
-        echo "<br><br><h2>Your message has been sent</h2>";
+        //echo "<br><br><h2>Your message has been sent</h2>";
     ?>
 </div>
 

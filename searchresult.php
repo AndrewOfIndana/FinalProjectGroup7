@@ -50,20 +50,22 @@ if (!$query) {
     echo "<h3>Terms Used: $terms_str </h3>";
     //display results in a table
     if ($query->num_rows == 0)
-        echo "Your search <i>'$terms_str'</i> did not match any products in our inventory";
+        echo "<p>Your search <i>'$terms_str'</i> did not match any products in our inventory</p>";
     else {
 ?>
     <h2>Browse for products</h2>
     <table id="productlist" class="productlist">
         <tr class="firstRow">
-            <th class="col1">Product Name</th>
-            <th class="col2">Stock in Shelf Remaining</th>
-            <th class="col3">Price</th>
+            <th class="col1">Product Image</th>
+            <th class="col2">Product Name</th>
+            <th class="col3">Stock in Shelf Remaining</th>
+            <th class="col4">Price</th>
         </tr>
         <!-- add PHP code here to list all books from the "books" table -->
         <?php
-            while (($row = $query->fetch_assoc()) !== NULL) {
+            while ($row = $query->fetch_assoc()) {
                 echo "<tr>";
+                echo "<td><a href='productdetail.php?id=", $row['id'], "'><img src=", $row['image'], " width='75' height='75'/></a></td>";
                 echo "<td><a href='productdetail.php?id=", $row['id'], "'>", $row['name'], "</a></td>";
                 echo "<td>", $row['stock'], " remaining</td>";
                 echo "<td>$", $row['price'], "</td>";

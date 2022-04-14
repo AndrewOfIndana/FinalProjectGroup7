@@ -11,7 +11,7 @@
         <div class="header">
             <div class="navbarTop">
                 <a href="index.php">
-                    <img src="assets/logo-placeholder.png" height = "75px">
+                    <img src="assets/logo.png" height = "75px">
                 </a>
                 <div class="userLinks">
                     <a href="userlogin.php">Log In</a><p>|</p>
