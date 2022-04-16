@@ -11,7 +11,7 @@ if (filter_has_var(INPUT_GET, "terms")) {
     $terms_str = filter_input(INPUT_GET, 'terms', FILTER_SANITIZE_STRING);
 } else {
     echo "There was not search terms found.";
-    include ('includes/footer.php');
+    require_once 'includes/footer.php';
     exit;
 }
 
@@ -28,13 +28,14 @@ foreach ($terms as $term) {
 $query = $conn->query($sql);
 
 //Handle selection errors
-if (!$query) {
+if(!$query) {
     $errno = $conn->errno;
-    $errmsg = $conn->error;
-    echo "Selection failed with: ($errno) $errmsg.";
-    $conn->close();
-    include ('includes/footer.php');
-    exit;
+   $errmsg = $conn->error;
+   echo "Insertion failed with: ($errno) $errmsg<br/>\n";
+   $conn->close();
+   require_once 'includes/error.php';
+   require_once 'includes/footer.php';
+   exit;
 }
 ?>
 

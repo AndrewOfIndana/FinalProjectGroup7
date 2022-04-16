@@ -14,12 +14,14 @@ $sql = "SELECT * FROM products";
 $query = @$conn->query($sql);
 
 //Handle errors
-if (!$query) {
+if(!$query) {
     $errno = $conn->errno;
-    $error = $conn->error;
-    $conn->close();
-    require 'includes/footer.php';
-    die("Selection failed: ($errno) $error.");
+   $errmsg = $conn->error;
+   echo "Insertion failed with: ($errno) $errmsg<br/>\n";
+   $conn->close();
+   require_once 'includes/error.php';
+   require_once 'includes/footer.php';
+   exit;
 }
 ?>
 <div id="product">

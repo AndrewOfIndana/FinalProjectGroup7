@@ -29,12 +29,14 @@ description='$description' WHERE id=$id";
 $query = @$conn->query($sql);
  
 //Handle selection errors
-if (!$query) {
+if(!$query) {
     $errno = $conn->errno;
-    $errmsg = $conn->error;
-    echo "Connection Failed with: $errno, $errmsg<br/>\n";
-    include ('includes/footer.php');
-    exit;
+   $errmsg = $conn->error;
+   echo "Insertion failed with: ($errno) $errmsg<br/>\n";
+   $conn->close();
+   require_once 'includes/error.php';
+   require_once 'includes/footer.php';
+   exit;
 }
 echo "Your account has been updated.";
  

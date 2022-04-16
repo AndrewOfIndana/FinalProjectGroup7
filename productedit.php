@@ -10,8 +10,9 @@ require_once 'includes/database.php';
 //retrieve user id from a query string
 if (!filter_has_var(INPUT_GET, 'id')) {
     echo "Error: product id was not found.";
-    require_once ('includes/footer.php');
-    exit();
+    require_once 'includes/error.php';
+    require_once 'includes/footer.php';
+    exit;
 }
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
@@ -22,15 +23,15 @@ $query = $conn->query($sql);
 //retrieve results
 $row = $query->fetch_assoc();
 
-//Handle selection errors
-if (!$query) {
+//Handle errors
+if(!$query) {
     $errno = $conn->errno;
-    $errmsg = $conn->error;
-    echo "Selection failed with: ($errno) $errmsg<br/>\n";
-    $conn->close();
-    //include the footer
-    require_once ('includes/footer.php');
-    exit;
+   $errmsg = $conn->error;
+   echo "Insertion failed with: ($errno) $errmsg<br/>\n";
+   $conn->close();
+   require_once 'includes/error.php';
+   require_once 'includes/footer.php';
+   exit;
 }
 //display results in a table
 ?>

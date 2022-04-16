@@ -8,7 +8,7 @@ require_once 'includes/header.php';
 ?>
 <h2>Add New Product</h2>
 
-<form action="productcreate.php" method="post" enctype="text/plain">
+<form action="productcreate.php" method="post">
     <table class="newproduct">
         <tr>
             <td>Product Name: </td>
@@ -44,7 +44,8 @@ require_once 'includes/header.php';
             <td><textarea name="description" rows="6" cols="65"></textarea></td>
         </tr>
     </table>
-    <input type="submit" name="Submit" id="Submit" value="Add Product" />
+        <input type="submit" value="Add Product" />
+        <input type="button" value="Cancel" onclick="window.location.href='product.php'" />
 </form>
 
 <?php

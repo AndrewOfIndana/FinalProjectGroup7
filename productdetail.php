@@ -9,9 +9,11 @@ require_once 'includes/database.php';
 
 //if product id cannot retrieved, terminate the script.
 if (!filter_has_var(INPUT_GET, "id")) {
+    echo "Your request cannot be processed since there was a problem retrieving product id";
     $conn->close();
-    require_once ('includes/footer.php');
-    die("Your request cannot be processed since there was a problem retrieving product id.");
+    require_once 'includes/error.php';
+    require_once 'includes/footer.php';
+    exit;
 }
 
 //retrieve product id from a query string variable.
@@ -24,12 +26,14 @@ $sql = "SELECT * FROM products WHERE id=$id";
 $query = @$conn->query($sql);
 
 //Handle errors
-if (!$query) {
+if(!$query) {
     $errno = $conn->errno;
-    $error = $conn->error;
-    $conn->close();
-    require 'includes/footer.php';
-    die("Selection failed: ($errno) $error.");
+   $errmsg = $conn->error;
+   echo "Insertion failed with: ($errno) $errmsg<br/>\n";
+   $conn->close();
+   require_once 'includes/error.php';
+   require_once 'includes/footer.php';
+   exit;
 }
 
 if (!$row = $query->fetch_assoc()) {
@@ -40,7 +44,7 @@ if (!$row = $query->fetch_assoc()) {
 ?>
 <div class="adminEdit">
     <a href="productedit.php?id=<?php echo $row['id'] ?>">Edit Product</a><br>
-    <a href="productdelete.php">Delete Product</a>
+    <a href="productdelete.php?id=<?php echo $row['id'] ?>">Delete Product</a>
 </div>
 <div id="productDetails">
     <h2><?php echo $row['name'] ?></h2>
