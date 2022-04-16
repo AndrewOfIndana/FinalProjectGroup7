@@ -1,12 +1,11 @@
 <?php
 /**
  * Author: Andrew Choi
- * Description: This is the home page of Steros Electronics
+ * Description: This page displays the search results of the user
  */
-$page_title = "Search Results - Steros Electronics";
-
-require_once ('includes/header.php');
-require_once('includes/database.php');
+$pageTitle = "Search Results - Steros Electronics";
+require_once 'includes/header.php';
+require_once 'includes/database.php';
 
 if (filter_has_var(INPUT_GET, "terms")) {
     $terms_str = filter_input(INPUT_GET, 'terms', FILTER_SANITIZE_STRING);
@@ -42,7 +41,7 @@ if (!$query) {
 <div id="product">
     <h1>Our Products</h1>
     <h2>Search for any product by name</h2>
-    <form action="searchresult.php" method="get">
+    <form action="productsearchresult.php" method="get">
         <input type="text" name="terms" size="70" required />&nbsp;&nbsp;
         <input type="submit" name="Submit" id="Submit" value="Search" />
     </form>
@@ -78,8 +77,7 @@ if (!$query) {
 }
 // clean up resultsets when we're done with them!
 $query->close();
-
 // close the connection.
 $conn->close();
 
-include ('includes/footer.php');
+require_once 'includes/footer.php';

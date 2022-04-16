@@ -4,7 +4,7 @@
  * Description: This is the about page of Steros Electronics
  */
 $pageTitle = "About Us - Steros Electronics";
-include ('includes/header.php');
+re ('includes/header.php');
 ?>
 <div id="about">
     <h1>Meet Our Team</h1>

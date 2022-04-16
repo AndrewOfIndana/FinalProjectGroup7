@@ -1,12 +1,8 @@
 <?php
-/** Author: Andrew Choi
- *  Date: 4/7/2022
- *  Description: This PHP script connects to the MySQL database and select
- *  the bookstore_db database. It also displays a user-friendly message if
- *  a connection error is encountered. You may need to modify the parameters
- *  for your server.
+/**
+ * Author: Andrew Choi
+ * Description: This is the database that holds all products, and users info
  */
- 
 //define parameters
 $host = "localhost";
 $login = "phpuser";

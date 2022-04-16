@@ -1,11 +1,11 @@
 <?php
 /**
  * Author: Andrew Choi
- * Description: This is the home page of Steros Electronics
+ * Description: This page details the product,admin's can delete or edit the page, and the customer can put his page on their shopping cart.
  */
-$page_title = "Product Details - Steros Electronics";
-require 'includes/header.php';
-require_once('includes/database.php');
+$pageTitle = "Product Details - Steros Electronics";
+require_once 'includes/header.php';
+require_once 'includes/database.php';
 
 //if product id cannot retrieved, terminate the script.
 if (!filter_has_var(INPUT_GET, "id")) {
@@ -38,7 +38,10 @@ if (!$row = $query->fetch_assoc()) {
     die("Product not found.");
 }
 ?>
-
+<div class="adminEdit">
+    <a href="productedit.php?id=<?php echo $row['id'] ?>">Edit Product</a><br>
+    <a href="productdelete.php">Delete Product</a>
+</div>
 <div id="productDetails">
     <h2><?php echo $row['name'] ?></h2>
     <table id="productdetails" class="productdetails">
@@ -63,4 +66,4 @@ if (!$row = $query->fetch_assoc()) {
 </div>
 
 <?php
-include ('includes/footer.php');
+require_once 'includes/footer.php';

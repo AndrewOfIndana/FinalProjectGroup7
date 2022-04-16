@@ -80,7 +80,7 @@ p {
   padding-top: 100px;
   color: #051b24;
   background-image: linear-gradient(to bottom, RGB(190, 200, 205, .7), RGB(190, 200, 205, .7)), url(../assets/hero.png);
-   background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -124,10 +124,17 @@ p {
   margin-bottom: 30px;
 }
 #product input {
-  margin-left: 5px;
-  margin-right: 5px;
-  height: 25px;
+  height: 50px;
   margin-bottom: 50px;
+  width: 700px;
+  border: 3px solid  #36525d;
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding-left: 5px;
+}
+#product input#Submit {
+  font-size: 20px;
+  width: 150px;
 }
 #product table.productlist {
   width: 90%;
@@ -160,6 +167,12 @@ p {
 #product table.productlist a:focus
 {
   color: #46b8da;
+}
+#product table.productlist td img {
+  border: 1px solid  #36525d;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 #product table.productlist th.col2 {
   width: 400px;
@@ -274,23 +287,28 @@ p {
 #contact input {
   margin-left: 5px;
   margin-right: 5px;
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding-left: 5px;
+  border: 3px solid  #36525d;
 }
   .contactNamesRow {
     height: 40px;
     width: 90%;
     margin: 0 auto;
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    justify-content: space-between;
   }
   .contactNamesRow input {
-    width: 100%;
+    width: 30%;
   }
   .contactEmailRow {
     height: 40px;
     width: 90%;
     margin: 0 auto;
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     justify-content: space-between;
   }
   .contactEmailRow input {
@@ -300,20 +318,29 @@ p {
     width: 90%;
     margin: 0 auto;
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     justify-content: space-between;
   }
   .contactMessageRow textarea {
     width: 90%;
     margin-left: 5px;
     margin-right: 5px;
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-left: 5px;
+    border: 3px solid  #36525d;  
   }
   .contactSubmit input{
     width: 250px;
     height: 50px;
-    font-size: 16px;
-    border-radius: 5px;
+    font-size: 20px;
+    width: 150px;  
   }
+/*Error*/
+.error {
+  height: 700px;
+}
+
 
 /*Footer*/
 .footer {

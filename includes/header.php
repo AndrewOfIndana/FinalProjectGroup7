@@ -14,6 +14,7 @@
                     <img src="assets/logo.png" height = "75px">
                 </a>
                 <div class="userLinks">
+                    <a href="productnew.php">Add New Product</a><p>|</p>
                     <a href="userlogin.php">Log In</a><p>|</p>
                     <a href="usersignup.php">Sign Up</a>
                 </div>

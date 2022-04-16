@@ -4,7 +4,7 @@
  * Description: This is the contact page of Steros Electronics
  */
 $pageTitle = "Contact Us - Steros Electronics";
-include ('includes/header.php');
+require_once 'includes/header.php';
 ?>
 
 <div id="contact">
@@ -30,4 +30,4 @@ include ('includes/header.php');
 </div>
 
 <?php
-include ('includes/footer.php');
+require_once 'includes/footer.php';

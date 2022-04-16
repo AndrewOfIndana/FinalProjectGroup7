@@ -4,7 +4,7 @@
  * Description: This is the home page of Steros Electronics
  */
 $pageTitle = "Steros Electronics";
-include ('includes/header.php');
+require_once 'includes/header.php';
 ?>
 
 <div id="home">
@@ -14,4 +14,4 @@ include ('includes/header.php');
 </div>
 
 <?php
-include ('includes/footer.php');
+require_once 'includes/footer.php';

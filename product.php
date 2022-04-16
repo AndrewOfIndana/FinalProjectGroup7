@@ -1,11 +1,11 @@
 <?php
 /**
  * Author: Andrew Choi
- * Description: This is the home page of Steros Electronics
+ * Description: This is the products page where it will list all products for the user, the user can click on a product, or use the search bar to look for a specific product
  */
-$page_title = "Browse Our Store - Steros Electronics";
-require 'includes/header.php';
-require_once('includes/database.php');
+$pageTitle = "Browse Our Store - Steros Electronics";
+require_once 'includes/header.php';
+require_once 'includes/database.php';
 
 //SELECT statement
 $sql = "SELECT * FROM products";
@@ -25,8 +25,8 @@ if (!$query) {
 <div id="product">
     <h1>Our Products</h1>
     <h2>Search for any product by name</h2>
-    <form action="searchresult.php" method="get">
-        <input type="text" name="terms" size="70" required />&nbsp;&nbsp;
+    <form action="productsearchresult.php" method="get">
+        <input type="text" name="terms" required />&nbsp;&nbsp;
         <input type="submit" name="Submit" id="Submit" value="Search" />
     </form>
     <h2>Browse for products</h2>
@@ -52,4 +52,4 @@ if (!$query) {
 </div>
 
 <?php
-include ('includes/footer.php');
+require_once 'includes/footer.php';
