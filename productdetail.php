@@ -43,7 +43,8 @@ if (!$row = $query->fetch_assoc()) {
 }
 ?>
 <div class="adminEdit">
-    <a href="productedit.php?id=<?php echo $row['id'] ?>">Edit Product</a><br>
+    <a href="productedit.php?id=<?php echo $row['id'] ?>">Edit Product</a>
+    <p> | </p>
     <a href="productdelete.php?id=<?php echo $row['id'] ?>">Delete Product</a>
 </div>
 <div id="productDetails">

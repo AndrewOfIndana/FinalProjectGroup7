@@ -218,7 +218,108 @@ p {
 #productDetails table.productdetails td.col3 {
   width: 500px;
 }
+.adminEdit {
+  width: 250px;
+  position: absolute;
+  right: 0;
+  margin-right: 50px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.adminEdit p {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #051b24;
+  font-size: 20px;
+}
+.adminEdit a {
+  color: #0044cc;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.adminEdit a:hover,
+.adminEdit a:active,
+.adminEdit a:focus
+{
+  color: #46b8da;
+}
 
+#form {
+  height: auto;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 100px;
+  margin-bottom: 125px;
+  color: #051b24;
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#form h1 {
+  font-size: 50px;
+  margin-bottom: 75px;
+}
+#form p {
+  font-size: 24px;
+}
+#form a {
+  font-size: 25px;
+  text-decoration: none;
+  color: #0044cc;
+}
+#form a:hover,
+#form a:active,
+#form a:focus
+{
+  color: #46b8da;
+}
+#form input {
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding-left: 5px;
+  border: 3px solid  #36525d;
+}
+#form input.Submit {
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 50px;
+}
+.formRowSingle,
+.formRowDouble {
+  height: 40px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+.formRowSingle input,
+.formRowSingle select {
+  width: 75%;
+}
+.formRowDouble input,
+.formRowDouble select {
+  width: 30%;
+}
+.formRowTextarea {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+.formRowTextarea textarea {
+  width: 90%;
+  margin-left: 20px;
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding-left: 5px;
+  border: 3px solid  #36525d;  
+}
 
 
 /*About*/

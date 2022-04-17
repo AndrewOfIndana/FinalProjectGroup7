@@ -38,8 +38,11 @@ if(!$query) {
    require_once 'includes/footer.php';
    exit;
 }
-echo "Product has been updated.";
-echo "<p><a href='productdetail.php?id=$id'>See Product</a></p>";
+
+echo "<div id='form'>";
+    echo "<h2>Product has been updated.</h2>";
+    echo "<p><a href='productdetail.php?id=$id'>See Updated Product</a></p>";
+echo "</div>";
 // close the connection.
 $conn->close();
 

@@ -55,7 +55,10 @@ $id = $conn->insert_id;
 $conn->close();
 
 //display a confirmation message and a link to display details of the new product
-echo "You have successfully added the new product into the database.";
-echo "<p><a href='productdetail.php?id=$id'>See New Product</a></p>";
+echo "<div id='form'>";
+    echo "<h2>You have successfully added the new product into the database.</h2>";
+    echo "<p><a href='productdetail.php?id=$id'>See New Product</a></p>";
+echo "</div>";
+
 require_once 'includes/footer.php';
 

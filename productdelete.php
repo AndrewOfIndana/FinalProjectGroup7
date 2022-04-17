@@ -40,6 +40,9 @@ if(!$query) {
 $conn->close();
 
 //display a confirmation message
-echo "You have successfully deleted a product from the database.<br><br>";
+echo "<div id='form'>";
+    echo "<h2>You have successfully deleted a product from the database.</h2>";
+    echo "<p><a href='product.php'>Go Back to Store</a></p>";
+echo "</div>";
 
 require_once 'includes/footer.php';
