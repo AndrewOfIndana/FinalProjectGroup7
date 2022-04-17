@@ -1,7 +1,7 @@
 <?php
 /**
  * Author: Andrew Choi
- * Description: This page allows the admin to edit a product's detaills.
+ * Description: This page allows the admin to edit a product's detail's.
  */
 $pageTitle = "Edit Product - Steros Electronics";
 require_once 'includes/header.php';
@@ -57,16 +57,16 @@ if(!$query) {
         <tr>
             <th>Category</th>
             <td>
-                <input name="categoryold" value="<?php echo $row['category_id'] ?>" readonly="readonly" />
+                <input name="category" value="<?php echo $row['category_id'] ?>" readonly="readonly" />
                 <select name="category">
-                    <option value="1">Computers, Printers, and Scanners</option>
-                    <option value="2">Laptops and Tablets</option>
-                    <option value="3">Phones and Phone Accessories</option>
-                    <option value="4">TVs and Monitors</option>
-                    <option value="5">Electronic Parts</option>
-                    <option value="6">Screws and Batteries</option>
-                    <option value="7">Cords and Wires</option>
-                    <option value="8">Other Accessories</option>
+                    <option value="1">1 - Computers, Printers, and Scanners</option>
+                    <option value="2">2 - Laptops and Tablets</option>
+                    <option value="3">3 - Phones and Phone Accessories</option>
+                    <option value="4">4 - TVs and Monitors</option>
+                    <option value="5">5 - Electronic Parts</option>
+                    <option value="6">6 - Screws and Batteries</option>
+                    <option value="7">7 - Cords and Wires</option>
+                    <option value="8">8 - Other Accessories</option>
                 </select>
             </td>
         </tr>
@@ -83,6 +83,7 @@ if(!$query) {
     <input type="submit" value="Update">&nbsp;&nbsp;
     <input type="button" onclick="window.location.href='productdetail.php?id=<?php echo$row['id'] ?>'" value="Cancel">
 </form>
+<p><a href="product.php">Back to the Store</a></p>
 
 <?php
 // clean up resultsets when we're done with them!
