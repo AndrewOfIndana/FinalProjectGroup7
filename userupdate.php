@@ -33,8 +33,11 @@ if(!$query) {
    require_once 'includes/footer.php';
    exit;
 }
-echo "Account has been updated.";
-echo "<p><a href='userdetail.php?id=$id'>Go To Account</a></p>";
+echo "<div id='form'>";
+    echo "<h2>Account has been updated.</h2>";
+    echo "<p><a href='userdetail.php?id=$id'>Go To Account</a></p>";
+echo "</div>";
+
 // close the connection.
 $conn->close();
 

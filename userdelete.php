@@ -40,7 +40,9 @@ if(!$query) {
 $conn->close();
 
 //display a confirmation message
-echo "You have successfully deleted your account";
-echo "<p><a href='index.php'>Back to Home</a></p>";
+echo "<div id='form'>";
+    echo "<h2>You have successfully deleted your account.</h2>";
+    echo "<p><a href='index.php'>Back to Home</a></p>";
+echo "</div>";
 
 require_once 'includes/footer.php';

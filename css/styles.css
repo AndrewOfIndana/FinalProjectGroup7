@@ -227,12 +227,25 @@ p {
   display: flex;
   justify-content: space-between;
 }
-.adminEdit p {
+.useroptions {
+  width: 400px;
+  position: absolute;
+  right: 0;
+  margin-right: 50px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+
+}
+.adminEdit p,
+.useroptions p {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: #051b24;
   font-size: 20px;
 }
-.adminEdit a {
+.adminEdit a, 
+.useroptions a
+{
   color: #0044cc;
   font-size: 20px;
   text-decoration: none;
@@ -240,10 +253,38 @@ p {
 }
 .adminEdit a:hover,
 .adminEdit a:active,
-.adminEdit a:focus
+.adminEdit a:focus,
+.useroptions a:hover,
+.useroptions a:active,
+.useroptions a:focus
 {
   color: #46b8da;
 }
+/*User*/
+#user {
+  height: auto;
+  width: 100%;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: #051b24;
+}
+#user h1 {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+#user table.userdetails {
+  width: 40%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  margin-right: 25%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 50px;
+  font-size: 24px;
+  padding: 5px;
+  text-align: left;
+}
+
 
 #form {
   height: auto;
@@ -375,8 +416,10 @@ p {
   text-align: center;
   margin: 0 auto;
   padding-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 125px;
   color: #051b24;
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 #contact h1 {
   font-size: 50px;
@@ -385,64 +428,19 @@ p {
 #contact p {
   font-size: 24px;
 }
-#contact input {
-  margin-left: 5px;
-  margin-right: 5px;
-  font-size: 16px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  padding-left: 5px;
+#contact input.Submit {
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 50px;
   border: 3px solid  #36525d;
 }
-  .contactNamesRow {
-    height: 40px;
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    margin-bottom: 30px;
-    justify-content: space-between;
-  }
-  .contactNamesRow input {
-    width: 30%;
-  }
-  .contactEmailRow {
-    height: 40px;
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    margin-bottom: 30px;
-    justify-content: space-between;
-  }
-  .contactEmailRow input {
-    width: 85%;
-  }
-  .contactMessageRow {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    margin-bottom: 30px;
-    justify-content: space-between;
-  }
-  .contactMessageRow textarea {
-    width: 90%;
-    margin-left: 5px;
-    margin-right: 5px;
-    font-size: 16px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding-left: 5px;
-    border: 3px solid  #36525d;  
-  }
-  .contactSubmit input{
-    width: 250px;
-    height: 50px;
-    font-size: 20px;
-    width: 150px;  
-  }
 /*Error*/
 .error {
   height: 300px;
 }
-
-
 /*Footer*/
 .footer {
   height: 200px;

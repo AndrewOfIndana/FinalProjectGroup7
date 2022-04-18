@@ -34,7 +34,10 @@ $id = $conn->insert_id;
 
 $conn->close();
  
-echo "New User Account has been Created.";
-echo "<p><a href='userdetail.php?id=$id'>Go To Account</a></p>";
+echo "<div id='form'>";
+    echo "<h2>New User Account has been Created.</h2>";
+    echo "<p><a href='userdetail.php?id=$id'>Go To Account</a></p>";
+echo "</div>";
+
 
 include 'includes/footer.php';

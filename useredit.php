@@ -36,32 +36,28 @@ if(!$query) {
 //display results in a table
 ?>
 <div id="form">
-    <h2>Edit User Details</h2> 
-
+    <h1>Edit User Details</h1> 
     <form name="edituser" action="userupdate.php" method="get">
-        <table class="userdetails">
-            <tr>
-                <th>User ID</th>
-                <td><input name="user_id" value="<?php echo $row['id'] ?>" readonly="readonly" /></td>
-            </tr>
-            <tr>
-                <th>Username: </th>
-                <td><input name="user_name" value="<?php echo $row['username'] ?>" size="30" required /></td>
-            </tr>
-            <tr>
-                <th>Email Address: </th>
-                <td><input type="email" name="user_email" value="<?php echo $row['email'] ?>" size="40" required /></td>
-            </tr>
-            <tr>
-                <th>Password: </th>
-                <td><input name="password" value="<?php echo $row['password'] ?>" size="30" required /></td>
-            </tr>
-        </table>
-        <br>
-        <input type="submit" value="Update">&nbsp;&nbsp;
-        <input type="button" onclick="window.location.href='userdetails.php?id=<?php echo$row['id'] ?>'" value="Cancel">
+        <div class="formRowSingle">
+            <p>User ID: </p>
+            <input name="user_id" value="<?php echo $row['id'] ?>" readonly="readonly" />
+        </div>
+        <div class="formRowSingle">
+            <p>Username: </p>
+            <input name="user_name" value="<?php echo $row['username'] ?>" required />
+        </div>
+        <div class="formRowSingle">
+            <p>Email Address: </p>
+            <input type="email" name="user_email" value="<?php echo $row['email'] ?>"  required />
+        </div>
+        <div class="formRowSingle">
+            <p>Password: </p>
+            <input name="password" value="<?php echo $row['password'] ?>" required />
+        </div>
+        <input type="submit" class="Submit" value="Update">
+        <input type="button" class="Submit" onclick="window.location.href='userdetails.php?id=<?php echo$row['id'] ?>'" value="Cancel">
+        <input type="button" class="Submit" onclick="window.location.href='index.php'" value="Back to Home">
     </form>
-    <p><a href="index.php">Back to Home</a></p>
 </div>
 <?php
 // clean up resultsets when we're done with them!

@@ -35,34 +35,34 @@ if(!$query) {
 }
 //display results in a table
 ?>
-
-<h2>User Details</h2>
-
-<table class="userlist">
-    <tr>
-        <th>User ID</th>
-        <td><?php echo $row['id'] ?></td>
-    </tr>
-    <tr>
-        <th>Username</th>
-        <td><?php echo $row['username'] ?></td>
-    </tr>
-    <tr>
-        <th>Email Address</th>
-        <td><?php echo $row['email'] ?></td>
-    </tr>
-    <tr>
-        <th>Password</th>
-        <td><?php echo $row['password'] ?></td>
-    </tr>
-</table>
-<p>
+<div class="useroptions">
     <a href="useredit.php?id=<?php echo $row['id'] ?>">Edit Account</a>
+    <p> | </p>
     <a href="userdelete.php?id=<?php echo $row['id'] ?>">Delete Account</a>
+    <p> | </p>
+    <a href="index.php">Back to Home</a>
 </div>
-
-</p>
-<p><a href="index.php">Back to Home</a></p>
+<div id="user">
+    <h1>User Details</h1>
+    <table class="userdetails">
+        <tr>
+            <th><p>User ID: </p></th>
+            <td><p><?php echo $row['id'] ?></td>
+        </tr>
+        <tr>
+            <th><p>Username: </p></th>
+            <td><p><?php echo $row['username'] ?></p></td>
+        </tr>
+        <tr>
+            <th><p>Email Address: </p></th>
+            <td><p><?php echo $row['email'] ?></p></td>
+        </tr>
+        <tr>
+            <th><p>Password: </p></th>
+            <td><p><?php echo $row['password'] ?></p></td>
+        </tr>
+    </table>
+</div>
 
 <?php
 // clean up resultsets when we're done with them!
