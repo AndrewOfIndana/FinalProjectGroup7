@@ -115,13 +115,26 @@ p {
   color: #051b24;
   text-align: center;
 }
-#product h1 {
+#shoppingcart {
+  height: auto;
+  width: 100%;
+  padding-top: 100px;
+  color: #051b24;
+  text-align: center;
+}
+
+#product h1,
+#shoppingcart h1 {
   font-size: 50px;
   margin-bottom: 50px;
 }
 #product h2 {
   font-size: 30px;
   margin-bottom: 30px;
+}
+#shoppingcart h2 {
+  font-size: 30px;
+  margin-top: 80px;
 }
 #product input {
   height: 50px;
@@ -133,10 +146,11 @@ p {
   padding-left: 5px;
 }
 #product input#Submit {
-  font-size: 20px;
+  font-size: 16px;
   width: 150px;
 }
-#product table.productlist {
+#product table.productlist,
+#shoppingcart table.productlist {
   width: 90%;
   border-collapse: collapse;
   margin: 0 auto;
@@ -145,18 +159,21 @@ p {
   font-size: 24px;
   padding: 5px;
 }
-#product table.productlist td {
+#product table.productlist td,
+#shoppingcart table.productlist td {
   padding: 4px;
   padding-top: 20px;
   vertical-align: top;
 }
-#product table.productlist tr.firstRow {
+#product table.productlist tr.firstRow,
+#shoppingcart table.productlist tr.firstRow {
   font-size: 30px;
   height: 50px;
   border-bottom: 3px solid  #36525d;
   color: #36525d;
 }
-#product table.productlist a {
+#product table.productlist a,
+#shoppingcart table.productlist a {
   font-size: 25px;
   text-decoration: none;
   text-align: right;
@@ -164,23 +181,30 @@ p {
 }
 #product table.productlist a:hover,
 #product table.productlist a:active,
-#product table.productlist a:focus
+#product table.productlist a:focus,
+#shoppingcart table.productlist a:hover,
+#shoppingcart table.productlist a:active,
+#shoppingcart table.productlist a:focus
 {
   color: #46b8da;
 }
-#product table.productlist td img {
+#product table.productlist td img,
+#shoppingcart table.productlist td img {
   border: 1px solid  #36525d;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-#product table.productlist th.col2 {
+#product table.productlist th.col2,
+#shoppingcart table.productlist th.col2 {
   width: 400px;
 }
-#product table.productlist th.col3 {
+#product table.productlist th.col3,
+#shoppingcart table.productlist th.col3 {
   width: 400px;
 }
-#product table.productlist th.col4 {
+#product table.productlist th.col4,
+#shoppingcart table.productlist th.col4 {
   width: 200px;
 }
 #productDetails {
@@ -297,6 +321,16 @@ p {
   font-size: 16px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+#shoppingform {
+  height: auto;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 125px;
+  color: #051b24;
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 #form h1 {
   font-size: 50px;
   margin-bottom: 75px;
@@ -315,13 +349,17 @@ p {
 {
   color: #46b8da;
 }
-#form input {
+#form input,
+#contact input,
+#shoppingform input {
   font-size: 16px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   padding-left: 5px;
   border: 3px solid  #36525d;
 }
-#form input.Submit {
+#form input.Submit,
+#contact input.Submit,
+#shoppingform input.Submit {
   font-size: 20px;
   padding-left: 10px;
   padding-right: 10px;
@@ -330,7 +368,8 @@ p {
   margin-top: 50px;
 }
 .formRowSingle,
-.formRowDouble {
+.formRowDouble, 
+.formRowTriple {
   height: 40px;
   width: 100%;
   margin: 0 auto;
@@ -345,6 +384,10 @@ p {
 .formRowDouble input,
 .formRowDouble select {
   width: 30%;
+}
+.formRowTriple input,
+.formRowTriple select {
+  width: 15%;
 }
 .formRowTextarea {
   width: 100%;
@@ -427,15 +470,6 @@ p {
 }
 #contact p {
   font-size: 24px;
-}
-#contact input.Submit {
-  font-size: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
-  margin-top: 50px;
-  border: 3px solid  #36525d;
 }
 /*Error*/
 .error {

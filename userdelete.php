@@ -8,7 +8,7 @@ require_once 'includes/header.php';
 require_once 'includes/database.php';
 
 
-//if there were problems retrieving book id, the script must end.
+//if there were problems retrieving user id, the script must end.
 if (!filter_has_var(INPUT_GET, 'id')) {
     echo "Error: user id was not found.";
     require_once 'includes/error.php';

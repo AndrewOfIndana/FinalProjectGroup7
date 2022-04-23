@@ -66,8 +66,29 @@ if (!$row = $query->fetch_assoc()) {
                 <p>$<?php echo $row['price'] ?></p>
                 <p><?php echo $row['description'] ?></p>
             </td>
+            <td>
+                
+            </td>
         </tr>
     </table>
+    <br><br>
+    <div id="form">
+        <h2>Make an order</h2>
+        <form name="productbuy" action="shoppingadd.php" method="get">
+            <div class="formRowSingle">
+                <p>Name: </p>
+                <input name="product_name" type="text" value="<?php echo $row['name'] ?>" readonly="readonly" />
+            </div>
+            <div class="formRowDouble">
+                <p>Price of 1: </p>
+                <input name="price" type="number" step="0.01" value="<?php echo $row['price'] ?>" readonly="readonly" />
+                <p>Quantity: </p>
+                <input name="quantity" type="number" required />
+            </div>
+            <input type="hidden" name="id" value="<?php echo $row['id'];?>">
+            <input type="submit" class="Submit" value="Make An Order">
+        </form>
+    </div>
 </div>
 
 <?php

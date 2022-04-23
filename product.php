@@ -39,7 +39,6 @@ if(!$query) {
             <th class="col3">Stock in Shelf Remaining</th>
             <th class="col4">Price</th>
         </tr>
-        <!-- add PHP code here to list all books from the "books" table -->
         <?php
             while ($row = $query->fetch_assoc()) {
                 echo "<tr>";

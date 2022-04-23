@@ -21,7 +21,7 @@ $terms = explode(" ", $terms_str);
 //select statement using pattern search. Multiple terms are concatnated in the loop.
 $sql = "SELECT * FROM products WHERE 1";
 foreach ($terms as $term) {
-    $sql .= " AND name LIKE '%$term%'";
+    $sql .= " AND name LIKE '%$term%' OR description LIKE '%$term%'";
 }
 
 //execute the query
