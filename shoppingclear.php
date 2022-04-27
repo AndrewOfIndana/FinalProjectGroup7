@@ -2,6 +2,10 @@
     if (session_status() == PHP_SESSION_NONE) {  
         session_start();  
     }
+    if (!isset($_SESSION['login'])) {  
+        header("Location: usersignin.php");  
+        exit();  
+    }  
       
     //empty the shopping cart  
     $_SESSION['cart'] = null;  

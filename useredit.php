@@ -55,7 +55,7 @@ if(!$query) {
             <input name="password" value="<?php echo $row['password'] ?>" required />
         </div>
         <input type="submit" class="Submit" value="Update">
-        <input type="button" class="Submit" onclick="window.location.href='userdetails.php?id=<?php echo$row['id'] ?>'" value="Cancel">
+        <input type="button" class="Submit" onclick="window.location.href='userdetail.php?id=<?php echo $row['id']; ?>'" value="Cancel">
         <input type="button" class="Submit" onclick="window.location.href='index.php'" value="Back to Home">
     </form>
 </div>

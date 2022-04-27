@@ -41,11 +41,25 @@ if (!$row = $query->fetch_assoc()) {
     require 'includes/footer.php';
     die("Product not found.");
 }
+
+if (session_status() == PHP_SESSION_NONE) {  
+    session_start();  
+}
+$role = 0;
+
+//if the use has logged in, retrieve login, name, and role.  
+if (isset($_SESSION['role']))   {  
+    $role = $_SESSION['role'];  
+}  
+
 ?>
 <div class="adminEdit">
-    <a href="productedit.php?id=<?php echo $row['id'] ?>">Edit Product</a>
-    <p> | </p>
-    <a href="productdelete.php?id=<?php echo $row['id'] ?>">Delete Product</a>
+    <?php
+    if ($role == 1) {  
+        echo "<a href='productedit.php?id=", $row['id'], "'>Edit Product</a><p> | </p>";
+        echo "<a href='productdelete.php?id=", $row['id'], "'>Delete Product</a>";  
+    }  
+    ?>
 </div>
 <div id="productDetails">
     <h2><?php echo $row['name'] ?></h2>

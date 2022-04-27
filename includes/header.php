@@ -12,6 +12,19 @@ if (session_status() == PHP_SESSION_NONE) {
         if ($cart) {  
         $count = array_sum($cart);  
         }  
+    } 
+
+    //variables for a user’s login, name, and role  
+    $login = '';  
+    $id = 0;
+    $role = 0;
+
+    //if the use has logged in, retrieve login, name, and role.  
+    if (isset($_SESSION['login']) AND  
+    isset($_SESSION['role']))   {  
+        $login = $_SESSION['login'];  
+        $id = $_SESSION['id'];  
+        $role = $_SESSION['role'];  
     }  
 ?>
 <!DOCTYPE html>
@@ -30,9 +43,19 @@ if (session_status() == PHP_SESSION_NONE) {
                     <img src="assets/logo.png" height = "75px">
                 </a>
                 <div class="userLinks">
-                    <a href="productnew.php">Add New Product</a><p>|</p>
-                    <a href="userdetail.php?id=1">My Account</a><p>|</p>
-                    <a href="usersignup.php">Sign Up</a>
+                <?php  
+                    if ($role == 1) {  
+                        echo "<a href='productnew.php'>Add New Product</a><p>|</p>";  
+                    }  
+                    if (empty($login)) {
+                        echo "<a href='usersignin.php'>Login</a><p>|</p>";
+                        echo "<a href='usersignup.php'>Sign Up</a>";
+                    }
+                    else {  
+                        echo "<a href='userdetail.php?id=$id'>My Account</a><p>|</p>";
+                        echo "<a href='userlogout.php'>Logout</a>";
+                    }  
+                ?>
                 </div>
             </div>
             <div class="navbarBottom">
