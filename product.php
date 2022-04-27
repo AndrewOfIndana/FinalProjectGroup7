@@ -1,7 +1,7 @@
 <?php
 /**
- * Author: Andrew Choi
- * Description: This is the products page where it will list all products for the user, the user can click on a product, or use the search bar to look for a specific product
+ * Author: Andrew Choi, Paul Lanier
+ * Description: This page displays all of the products in the store
  */
 $pageTitle = "Browse Our Store - Steros Electronics";
 require_once 'includes/header.php';

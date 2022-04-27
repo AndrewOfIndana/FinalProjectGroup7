@@ -1,20 +1,24 @@
 <?php
-    require_once 'includes/database.php';
-    
-    if (session_status() == PHP_SESSION_NONE) {  
-        session_start();  
-    }
-    if (!isset($_SESSION['login'])) {  
-        header("Location: usersignin.php");  
-        exit();  
-    }  
+/**
+ * Author: Andrew Choi
+ * Description: This page checks out the shopping cart
+ */
+require_once 'includes/database.php';
 
-    //empty the shopping cart  
-    $_SESSION['cart'] = null;  
-    //set page title  
-    $pageTitle = "Check Out - Steros Electronics";
-    require_once 'includes/header.php';
-    ?>
+if (session_status() == PHP_SESSION_NONE) {  
+    session_start();  
+}
+if (!isset($_SESSION['login'])) {  
+    header("Location: usersignin.php");  
+    exit();  
+}  
+
+//empty the shopping cart  
+$_SESSION['cart'] = null;  
+//set page title  
+$pageTitle = "Check Out - Steros Electronics";
+require_once 'includes/header.php';
+?>
 <div id='form'>
     <h2>Checkout</h2>
     <p>Thank you for shopping with us. Your business is greatly appreciated. You will be notified once your items are shipped.</p>

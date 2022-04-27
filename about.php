@@ -1,7 +1,7 @@
 <?php
 /**
  * Author: Andrew Choi
- * Description: This is the about page of Steros Electronics
+ * Description: This is the about page of the website
  */
 $pageTitle = "About Us - Steros Electronics";
 require_once 'includes/header.php';

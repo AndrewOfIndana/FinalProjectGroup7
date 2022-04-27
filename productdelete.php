@@ -1,14 +1,14 @@
 <?php
 /**
- * Author: Andrew Choi
- * Description: This is the page where new products are deleted from the database
+ * Author: Andrew Choi, Paul Lanier
+ * Description: This page deletes products from database
  */
 $pageTitle = "Product Deleted - Steros Electronics";
 require_once 'includes/header.php';
 require_once 'includes/database.php';
 
 
-//if there were problems retrieving book id, the script must end.
+//if there were problems retrieving product id, the script must end.
 if(!filter_has_var(INPUT_GET, 'id')) {
     echo "Deletion cannot continue since there were problems retrieving product id";
     require_once 'includes/error.php';

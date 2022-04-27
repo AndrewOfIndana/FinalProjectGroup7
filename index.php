@@ -1,7 +1,7 @@
 <?php
 /**
- * Author: Andrew Choi
- * Description: This is the home page of Steros Electronics
+ * Author: Andrew Choi, Paul Lanier
+ * Description: This is the home page of the website
  */
 $pageTitle = "Steros Electronics";
 require_once 'includes/header.php';

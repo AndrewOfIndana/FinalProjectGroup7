@@ -40,7 +40,7 @@ $total = 0;
             //execute the query  
             $query = $conn->query($sql);
 
-            //fetch books and display them in a table  
+            //fetch products and display them in a table  
             while ($row = $query->fetch_assoc()) {
                 $id = $row['id'];
                 $image = $row['image'];  

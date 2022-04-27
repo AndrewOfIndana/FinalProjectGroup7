@@ -1,6 +1,6 @@
 <?php
 /**
- * Author: Andrew Choi
+ * Author: Andrew Choi, Abraham Johnson
  * Description: This is the database that holds all products, and users info
  */
 //define parameters

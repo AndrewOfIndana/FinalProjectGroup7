@@ -1,4 +1,8 @@
 <?php
+/**
+ * Author: Andrew Choi
+ * Description: This page logs out user.
+ */ 
 //start session if it has not already started  
 if (session_status() == PHP_SESSION_NONE) {  
     session_start();  

@@ -1,13 +1,14 @@
 <?php
 /**
- * Author: Andrew Choi
- * Description: This page allows the admin to edit a product's detail's.
+/**
+ * Author: Andrew Choi, Paul Lanier
+ * Description: This page allows the user to edit a product
  */
 $pageTitle = "Edit Product - Steros Electronics";
 require_once 'includes/header.php';
 require_once 'includes/database.php';
 
-//retrieve user id from a query string
+//retrieve product id from a query string
 if (!filter_has_var(INPUT_GET, 'id')) {
     echo "Error: product id was not found.";
     require_once 'includes/error.php';
@@ -81,7 +82,7 @@ if(!$query) {
     </form>
 </div>
 <?php
-// clean up resultsets when we're done with them!
+// clean up result sets when we're done with them!
 $query->close();
 
 // close the connection.

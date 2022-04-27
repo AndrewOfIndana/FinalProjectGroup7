@@ -1,7 +1,7 @@
 <?php
 /**
- * Author: Andrew Choi
- * Description: This page is the error page
+ * Author: Andrew Choi, Paul Lanier
+ * Description: This is the other error page
  */
 $pageTitle = "Error";
 require_once 'includes/header.php';

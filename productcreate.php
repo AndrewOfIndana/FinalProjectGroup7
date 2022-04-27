@@ -1,7 +1,7 @@
 <?php
 /**
- * Author: Andrew Choi
- * Description: This is the page where new products are added into the database
+ * Author: Andrew Choi, Paul Lanier
+ * Description: This page processes the form and adds the new product into the database
  */
 $pageTitle = "Product Added - Steros Electronics";
 require_once 'includes/header.php';

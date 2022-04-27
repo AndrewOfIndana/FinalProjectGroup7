@@ -1,8 +1,8 @@
 <?php
 /**
  * Author: Andrew Choi
- * Description: This is the page where new products are deleted from the database
- */
+ * Description: This page deletes account and ends session.
+ */ 
 $pageTitle = "Account Deleted - Steros Electronics";
 require_once 'includes/header.php';
 require_once 'includes/database.php';

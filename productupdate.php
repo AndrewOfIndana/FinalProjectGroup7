@@ -1,7 +1,7 @@
 <?php
 /**
- * Author: Andrew Choi
- * Description: This page updates a product's detaills.
+ * Author: Andrew Choi, Paul Lanier
+ * Description: This page updates a product's details
  */
 $pageTitle = "Product Updated - Steros Electronics";
 require_once 'includes/header.php';

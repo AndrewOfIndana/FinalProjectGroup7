@@ -1,7 +1,7 @@
 <?php
 /**
  * Author: Andrew Choi
- * Description: This page displays the search results of the user
+ * Description: This page shows the search results of the user
  */
 $pageTitle = "Search Results - Steros Electronics";
 require_once 'includes/header.php';
@@ -18,7 +18,7 @@ if (filter_has_var(INPUT_GET, "terms")) {
 //explode the search terms into an array
 $terms = explode(" ", $terms_str);
 
-//select statement using pattern search. Multiple terms are concatnated in the loop.
+//select statement using pattern search. Multiple terms are concatenated in the loop.
 $sql = "SELECT * FROM products WHERE 1";
 foreach ($terms as $term) {
     $sql .= " AND name LIKE '%$term%' OR description LIKE '%$term%'";
@@ -61,7 +61,7 @@ if(!$query) {
             <th class="col3">Stock in Shelf Remaining</th>
             <th class="col4">Price</th>
         </tr>
-        <!-- add PHP code here to list all books from the "books" table -->
+        <!-- add PHP code here to list all books from the "products" table -->
         <?php
             while ($row = $query->fetch_assoc()) {
                 echo "<tr>";
@@ -76,7 +76,7 @@ if(!$query) {
 </div>
     <?php
 }
-// clean up resultsets when we're done with them!
+// clean up result sets when we're done with them!
 $query->close();
 // close the connection.
 $conn->close();

@@ -1,7 +1,7 @@
 <?php
 /**
- * Author: Andrew Choi
- * Description: This page allows the admin to add a new product.
+ * Author: Andrew Choi, Paul Lanier
+ * Description: This page allows the user to add a new product
  */
 $pageTitle = "Add New Product - Steros Electronics";
 require_once 'includes/header.php';

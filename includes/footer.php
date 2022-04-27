@@ -1,3 +1,9 @@
+<?php
+/**
+ * Author: Paul Lanier, Andrew Choi
+ * Description: This is the footer of the website
+ */
+ ?>
 </div>
 
 <div class="footer">

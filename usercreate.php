@@ -1,7 +1,7 @@
 <?php
 /**
  * Author: Andrew Choi
- * Description: This page create a new account.
+ * Description: This page registers new account.
  */ 
 //retrieve user inputs from the form
 if(!filter_has_var(INPUT_POST, 'user_name') || 

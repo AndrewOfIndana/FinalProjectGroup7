@@ -1,7 +1,8 @@
 <?php
 /**
- * Author: Andrew Choi
- * Description: This page details the product,admin's can delete or edit the page, and the customer can put his page on their shopping cart.
+/**
+ * Author: Andrew Choi, Paul Lanier
+ * Description: This page shows the details of a product as well as the add to cart feature
  */
 $pageTitle = "Product Details - Steros Electronics";
 require_once 'includes/header.php';
@@ -47,7 +48,7 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 $role = 0;
 
-//if the use has logged in, retrieve login, name, and role.  
+//if the use has logged in, retrieve role.  
 if (isset($_SESSION['role']))   {  
     $role = $_SESSION['role'];  
 }  

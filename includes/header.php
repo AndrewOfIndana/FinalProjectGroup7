@@ -1,4 +1,9 @@
 <?php
+/**
+ * Author: Paul Lanier, Andrew Choi
+ * Description: This is the header of the website
+ */
+
 if (session_status() == PHP_SESSION_NONE) {  
         session_start();  
     }
@@ -14,12 +19,12 @@ if (session_status() == PHP_SESSION_NONE) {
         }  
     } 
 
-    //variables for a user’s login, name, and role  
+    //variables for a user’s login, id, and role  
     $login = '';  
     $id = 0;
     $role = 0;
 
-    //if the use has logged in, retrieve login, name, and role.  
+    //if the use has logged in, retrieve login, id, and role.  
     if (isset($_SESSION['login']) AND  
     isset($_SESSION['role']))   {  
         $login = $_SESSION['login'];  

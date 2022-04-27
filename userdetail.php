@@ -1,8 +1,8 @@
 <?php
 /**
  * Author: Andrew Choi
- * Description: This page allows the user's details.
- */
+ * Description: This page displays user info.
+ */ 
 $pageTitle = "Your Account - Steros Electronics";
 require_once 'includes/header.php';
 require_once 'includes/database.php';

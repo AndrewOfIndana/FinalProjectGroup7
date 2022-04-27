@@ -1,8 +1,8 @@
 <?php
 /**
  * Author: Andrew Choi
- * Description: This page allows the user to edit their account.
- */
+ * Description: This page allows the user to edit account.
+ */ 
 $pageTitle = "Edit Account - Steros Electronics";
 require_once 'includes/header.php';
 require_once 'includes/database.php';

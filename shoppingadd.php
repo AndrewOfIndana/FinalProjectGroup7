@@ -16,7 +16,7 @@
         $cart = array();  
     }
 
-    //if there were problems retrieving user id, the script must end.
+    //if there were problems retrieving product id, the script must end.
     if (!filter_has_var(INPUT_GET, 'id') ||
         !filter_has_var(INPUT_GET, 'quantity')) {
         $error = "product id not found. Operation cannot proceed.<br><br>";  
